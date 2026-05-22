@@ -5,7 +5,7 @@
 
 ## 👤 About Me
 
-I'm a final-year Software Engineering student at the University of the West Indies, Mona, and Founder/CTO of 3urek4 — a Jamaican tech company building a portfolio of software products. This repository documents my 13-week journey through the CariSurg MedTech Pathways 2026 programme, where I'm training as a Clinical AI Engineer embedded in the Emergency Department at Mercer General Hospital.
+I'm a final-year Software Engineering student at the University of the West Indies, Mona. This repository documents my 13-week journey through the CariSurg MedTech Pathways 2026 programme, where I'm training as a Clinical AI Engineer embedded in the Emergency Department at Mercer General Hospital.
 
 ---
 
