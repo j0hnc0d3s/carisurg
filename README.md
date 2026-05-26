@@ -47,11 +47,11 @@ carisurg-portfolio/
 |---|-----------|--------|
 | 1 | Data Cleaning — Gender Column | ✅ Complete |
 | 2 | Data Cleaning — Assigned Column (MAP) | ✅ Complete |
-| 3 | Data Visualization | 🔄 In Progress |
-| 4 | Vital Sign Description | 🔄 In Progress |
-| 5 | Unconsidered Metrics | 🔄 In Progress |
-| 6 | Triage Pseudocode | 🔄 In Progress |
-| 7 | Final Submission | 🔄 In Progress |
+| 3 | Data Visualization | ✅ Completes |
+| 4 | Vital Sign Description | ✅ Complete |
+| 5 | Unconsidered Metrics | ✅ Complete |
+| 6 | Triage Pseudocode | ✅ Complete |
+| 7 | Final Submission | ✅ Complete |
 
 **Dataset:** `EmergencyTriageDataset_Reduced_Dirty.csv` — 2,205 de-identified ED triage records with 11 columns (demographics + vital signs).
 
