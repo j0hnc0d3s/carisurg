@@ -23,17 +23,42 @@ The programme is run by [CariSurg](https://carisurg.com), a partnership between 
 
 ```
 carisurg-portfolio/
-├── week-0/
-│   ├── assignment/
-│   │   ├── week0_day1_gender_cleaning.ipynb        # Assignment 1
-│   │   └── week0_tutorial2_advanced_cleaning.ipynb # Assignment 2
-│   └── EmergencyTriageDataset_Reduced_Dirty.csv
-├── week-1/          # Coming soon
-├── week-2/          # Coming soon
+├── week-01/
+│   ├── assignment-01/
+│   │   ├── week0_day1_gender_cleaning.ipynb
+│   │   └── assignment01.md
+│   └── assignment-02/
+│   │   ├── week0_day1_gender_cleaning.ipynb
+│   │   └── assignment01.md
+│   └── assignment-03/
+│   │   ├── age_vs_map.png
+│   │   └── age_vs_pulse.png
+│   │   └── age_vs_temp.png
+│   │   └── assignment-03.pdf
+│   │   └── gcs_histogram.png
+│   │   └── gender_distribution.png
+│   │   └── map_histogram.png
+│   │   └── pulse_histogram.png
+│   │   └── sbp_vs_dbp.png
+│   │   └── vitals_boxplots.png
+│   │   └── week0_day3_visualisation.ipynb
+│   └── assignment-04/
+│   │   └── assignment-04.pdf
+│   └── assignment-05/
+│   │   └── assignment-05.pdf
+│   └── assignment-06/
+│       └── assignment-06.pdf
+├── week-02/
+│   ├── assignment-07/
+│   │   └── assignment-07.pdf
+│   └── assignment-08/
+│       └── assignment-08.pdf
+├── week-3/          # Coming soon
 │   ...
 ├── week-12/         # Coming soon
 ├── requirements.txt
 └── README.md
+└── EmergencyTriageDataset_Reduced_Dirty.csv
 ```
 
 ---
@@ -62,8 +87,37 @@ carisurg-portfolio/
 
 ---
 
-### 🔜 Week 1–12 — Coming Soon
-Weeks 1–12 will cover progressively advanced clinical AI topics including feature engineering, model building, evaluation, and deployment considerations for low-resource Caribbean health settings. This section will be updated weekly.
+### ✅ Week 1 — Research Fundamentals (Academic Papers & Preliminary Proposal)
+> *Research metholodology, and principles*
+
+| # | Assignment | Status |
+|---|-----------|--------|
+| 1 | Intermim Submission | ✅ Complete |
+| 2 | Final Submission | ✅ Complete |
+
+**Key work this week:**
+- Learned how to use Zotoro to reference publication/articles.
+- Refined research principles, and writing.
+
+---
+
+### ✅ Week 2 — Project Setup & Documentation
+> *Research metholodology, and principles, Git fundamentals*
+
+| # | Assignment | Status |
+|---|-----------|--------|
+| 1 | Intermim Submission | 🔄 In-Progress |
+| 2 | Final Submission | 🔄 In-Progress |
+| 3 | Career Challenge | 🔄 In-Progress |
+
+**Key work this week:**
+- Learned how to use Zotoro to reference publication/articles.
+- Refined research principles, and writing.
+
+---
+
+### 🔜 Week 3–12 — Coming Soon
+Weeks 3–12 will cover progressively advanced clinical AI topics including feature engineering, model building, evaluation, and deployment considerations for low-resource Caribbean health settings. This section will be updated weekly.
 
 ---
 
@@ -76,10 +130,11 @@ Weeks 1–12 will cover progressively advanced clinical AI topics including feat
 4. Run cells with **Shift + Enter**
 
 ### Option B — Local (VS Code)
+
 ```bash
 # Clone the repo
 git clone https://github.com/j0hnc0d3s/carisurg-portfolio.git
-cd carisurg-portfolio
+cd carisurg-portfolio/week0
 
 # Create and activate virtual environment
 python3.12 -m venv venv
@@ -89,6 +144,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 python -m ipykernel install --user --name=carisurg-venv
 ```
+
 Then open any `.ipynb` in VS Code and select the **carisurg-venv** kernel.
 
 ---
@@ -123,7 +179,7 @@ All work in this portfolio is grounded in the operational realities of the Merce
 **Josiah John-Green**
 - GitHub: [@j0hnc0d3s](https://github.com/j0hnc0d3s)
 - LinkedIn: [linkedin.com/in/josiah-john-green](https://linkedin.com/in/josiah-john-green)
-- Company: [3urek4](https://3urek4.com)
+- Portfolio: [Portfolio](https://j0hnc0d3s.github.io/portfolio/)
 
 ---
 
