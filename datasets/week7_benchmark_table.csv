@@ -1,0 +1,5 @@
+Model,Accuracy,Macro Recall,ESI-1 Recall,Weighted F1,Macro F1,Train (s),Infer (ms/pred),Interpretability
+Logistic Regression (baseline),0.254,0.417,0.75,0.327,0.214,0.163,0.0001,High
+Random Forest,0.464,0.3,0.0,0.471,0.288,2.104,0.0184,Medium
+Random Forest (tuned for recall),0.308,0.408,0.5,0.35,0.22,27.72,0.0058,Medium
+Gradient Boosting,0.348,0.377,0.25,0.395,0.254,1.522,0.0021,Low
