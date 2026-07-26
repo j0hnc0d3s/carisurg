@@ -2,7 +2,8 @@
 # Any change to the model must happen here, not by editing src/ directly.
 
 data:
-  path: "data/triage_cleaned_v1.csv"
+  # Use project-local data path (relative) so scripts can find the dataset in this repo's data/ dir
+  path: "../../datasets/triage_cleaned_v1.csv"
   target: "esi"
 
 features:

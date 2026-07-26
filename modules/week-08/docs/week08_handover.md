@@ -21,7 +21,7 @@ This repo trains and evaluates a machine-learning classifier that predicts a pat
 
 ```bash
 git clone https://github.com/j0hnc0d3s/carisurg.git
-cd carisurg
+cd carisurg/modules/week-08
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
