@@ -1,0 +1,43 @@
+# config.yaml — single source of truth for the pinned Phase 3 model
+# Any change to the model must happen here, not by editing src/ directly.
+
+data:
+  path: "data/triage_cleaned_v1.csv"
+  target: "esi"
+
+features:
+  columns:
+    - "age"
+    - "triage_vital_o2"
+    - "cc_chestpain"
+    - "cc_shortnessofbreath"
+    - "cc_suicidal"
+    - "cc_alcoholintoxication"
+    - "cc_alteredmentalstatus"
+    - "arrival_ambulance"
+    - "triage_vital_rr"
+    - "triage_vital_hr"
+  # arrival_ambulance is derived from raw `arrivalmode`, not a raw column — see src/features.py
+  arrival_mode_column: "arrivalmode"
+  arrival_mode_value: "ambulance"   # lowercase in the raw data — a one-character miss zeroes this feature
+
+split:
+  test_size: 0.20
+  random_state: 42
+  stratify: true
+
+model:
+  # Pinned Week 7 decision: logistic regression baseline, not Random Forest / Gradient Boosting.
+  # See docs/model-selection.md and docs/decisions/2026-week-7-model-choice.md for why.
+  type: "logistic_regression"
+  scale_features: true
+  params:
+    class_weight: "balanced"
+    max_iter: 2000
+    solver: "lbfgs"
+    random_state: 42
+
+output:
+  model_path: "records/final_model.joblib"
+  scaler_path: "records/final_scaler.joblib"
+  metrics_path: "records/final_metrics.json"
