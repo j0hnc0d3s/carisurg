@@ -28,3 +28,21 @@ Keep the Week 6 logistic regression baseline as the reference model for Phase 3;
 
 - Whether a different rare-class strategy (oversampling ESI-1 specifically, a two-stage model that screens for ESI-1 first and defers everything else to a second classifier, or cost-sensitive thresholding rather than `class_weight="balanced"`) would recover ESI-1 recall without sacrificing the baseline's simplicity — not yet tested.
 - Whether this result replicates on Caribbean ED data once Phase 1 delivers it, since all of this week's numbers are still on the Yale-derived dataset.
+
+---
+
+## Addendum — 2026-07-25 (Week 8): responding to Dr. De Freitas's objection
+
+**Objection raised:** is a 0.75 ESI-1 recall worth having only 0.254 overall accuracy? Framed as "assign every patient's ESI level," 0.254 accuracy means the model is wrong on roughly 3 of every 4 patients across ESI 2–5 — the 98.86% of volume that isn't ESI-1. That has real costs the original decision above didn't weigh: nurses losing trust in a tool that's visibly wrong most of the time (and abandoning it before it ever catches an ESI-1), and under-triage errors on the common classes (ESI-2 strokes, sepsis) being spread across a much larger population than the 77 ESI-1 encounters this whole argument was built around.
+
+**This is a fair objection, and it exposes a real gap: the original decision above answered "which model" without answering "what is this model actually for."** Comparing four classifiers on accuracy vs. ESI-1 recall implicitly assumed all four were candidates to autonomously assign ESI end-to-end. At 0.254 accuracy, the logistic regression baseline cannot defensibly be deployed that way — Dr. De Freitas is right about that.
+
+**Resolution — reframe the model's role, not the model itself:**
+
+The pinned logistic regression does not change. What changes is what it's for: a **high-recall ESI-1 screening flag that runs alongside normal triage**, not a replacement for it. A nurse still assigns ESI 2–5 exactly as before; the model's only job is to ask "is this one you might be missing?" on the rare, high-consequence class it was actually built and evaluated for. Under that framing, 0.254 overall accuracy is no longer the relevant number, because the tool was never the source of truth for ESI 2–5 in the first place — and the objection above stops applying to a use case that was never proposed.
+
+**Logged as future work, not this week's deliverable** (Week 8 is reproducibility/handover, not modelling — this is deliberately not new model-shopping):
+- A two-stage/hierarchical architecture: a cheap, high-recall-only ESI-1 screen, with a separately accuracy-optimised model or ordinary nursing judgement handling ESI 2–5.
+- Whether that screen should be this same logistic regression, or something purpose-built for a screening threshold (e.g. tuned on precision-recall trade-off rather than `class_weight="balanced"`).
+
+See `docs/HANDOVER.md` for the updated final-model-decision line and known limitations reflecting this reframing.
